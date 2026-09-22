@@ -39,7 +39,7 @@ will fail eval issues designed around that family.
 | Scope fits | issue + thread | issue describes the bounded task| required |
 | Nobody is working on the issue | Assignee, Linked PRs, claim comments | No assignee, opened PR links or claim comments | required |
 | Label | Issuelabels | Labeled "good first issue" or equivalent | preferred |
-| Issue reponse latency | Maintainer first response sample | Manrainer has responded within 30 days | required |
+| Issue reponse latency | Maintainer first response sample | Manrainer has responded within 30 days | preferred |
 | AI contribution policy | contibuting.md | No outright ban on AI usage and contribution | required |
 
 ## Verdict rule
