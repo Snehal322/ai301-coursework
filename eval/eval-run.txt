@@ -1,24 +1,33 @@
-grading 20 package(s) with the tool at /Users/snehalchavan/.claude/skills/pr-precheck, model sonnet, 5 worker(s)...
+# eval run written by run_eval.py at 2026-10-11T09:11:08Z
+# model: sonnet (pinned)
+# graded: ../tools/pr-precheck
+# packages: 20 scored
+#   rubric.md  sha256:07f7f01ef6e081b5
+#   evidence-guide.md  sha256:c0c2573dbdd8a07c
+#   procedure.md  sha256:48916776dbb1216c
+#   SKILL.md  sha256:cb51a6e11b00b42e
+#
+grading 20 package(s) with rubric.md + evidence-guide.md + procedure.md, model sonnet, 5 worker(s)...
   pkg-03: reject
-  pkg-02: accept
   pkg-04: reject
+  pkg-02: accept
   pkg-05: accept
   pkg-01: reject
-  pkg-07: reject
   pkg-06: reject
-  pkg-10: reject
+  pkg-07: reject
   pkg-09: reject
+  pkg-10: reject
   pkg-08: accept
-  pkg-14: reject
   pkg-12: reject
+  pkg-14: reject
+  pkg-15: reject
   pkg-11: accept
   pkg-13: accept
-  pkg-15: reject
-  pkg-17: reject
   pkg-16: accept
   pkg-18: reject
+  pkg-17: reject
   pkg-20: reject
-  pkg-19: reject
+  pkg-19: accept
 
 item    category        gold    verdict  agree  note
 pkg-01  standards-wall  reject  reject   yes    
@@ -39,8 +48,8 @@ pkg-15  unreviewable    reject  reject   yes
 pkg-16  clear-accept    accept  accept   yes    
 pkg-17  silent-drift    reject  reject   yes    
 pkg-18  unreviewable    reject  reject   yes    
-pkg-19  clear-accept    accept  reject   NO     failed: test-evidence, voice-style
+pkg-19  clear-accept    accept  accept   yes    
 pkg-20  standards-wall  reject  reject   yes    
 
-categories: clear-accept 6/7  not-tested 4/4  silent-drift 4/4  standards-wall 2/2  unreviewable 3/3
-agreement: 19/20 scored items  (bar: 18/20: PASS)
+categories: clear-accept 7/7  not-tested 4/4  silent-drift 4/4  standards-wall 2/2  unreviewable 3/3
+agreement: 20/20 scored items  (bar: 18/20: PASS)
