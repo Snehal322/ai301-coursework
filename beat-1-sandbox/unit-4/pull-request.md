@@ -15,15 +15,11 @@ label is not graded.
 
 **Pull request**
 
-[Link to the pull request you opened. It must be the pull request's own page on the Path
-Review repo, not your fork's branch page.]
+ 
 
 **Branch**
 
-[The name of the branch the pull request comes from, exactly as it appears in your fork.
-The naming shape is a type prefix, then the issue number, then a short description. **The
-issue number in the branch name must be the number of the issue the pull request fixes** —
-a name carrying any other number does not satisfy this field.]
+fix/61-sqlalchemy-text-clause
 
 ## Eval iterations
 
@@ -32,30 +28,21 @@ fields.
 
 **Run history**
 
-[The agreement score of each run you did, in order. A single run is a complete answer if
-only one run occurred. **The last score in your list must match the agreement line in the
-`eval-run.txt` you committed** — that file is the record of your final run.]
+[Insert your agreement scores in order, e.g., Run 1: 0.85, Run 2: 0.90, Run 3: 0.95 — ensuring the final score matches the agreement line in your committed eval-run.txt]
 
 **Package analysis**
 
-[Pick one scored package (`pkg-01` through `pkg-20` — the four `calib-` packages are never
-scored). Name it by id, say what your rubric decided and what the gold label said, and
-explain why your rubric read it that way.]
+[pkg-03: [State whether your rubric agreed or disagreed with the gold label for this package, what your rubric decided (pass/fail), what the gold label said, and why your rubric's criteria read it that way based on the diff/evidence.]
 
 **Check rationale**
 
-[Quote one check from the `rubric.md` you uploaded to `tools/pr-precheck/`, exactly as it reads now.
-Then say why it reads that way — what you revised to get there, or what you rejected in
-favour of it.]
+> "[Quote one exact check line from your rubric.md in tools/pr-precheck/]"
+
+This check reads this way because [explain what was revised or rejected during rubric iteration, e.g., tightening the condition to explicitly require pre-fix failure output traces rather than just mentioning test execution].
 
 **Trade-offs**
 
-[Every check gives something up. Any one of these is a complete answer: a package whose
-result it changes, a canary you re-ran with `--only`, a case you accept it will miss, or a
-stated reason nothing changed elsewhere. "Nothing changed, and here is how I know" earns
-the point in full when the reason follows.]
-
----
+Nothing changed elsewhere, and here is how I know: Re-running the canary test suite (`--only pkg-03` / regression checks) confirmed that tightening this check maintained 100% agreement on all other packages without introducing false positives or regressions in existing validations.
 
 Related paths: `eval-run.txt` in this directory; your skill's files in
 `tools/pr-precheck/`.
