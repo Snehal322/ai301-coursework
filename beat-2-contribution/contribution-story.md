@@ -8,11 +8,10 @@ format criteria grade exactly that. Your course repo link is the whole submissio
 files and no evidence uploads are part of Assignment 5.
 
 **Contribution Number:** [1]
-**Student:** [Student name]
-**GitHub Username:** [your GitHub username, exactly as it appears on your profile - no @, no
-profile URL. Your comments upstream are identified by this name.]
-**Issue:** [GitHub issue link]
-**Pull Request:** [GitHub PR link, once opened]
+**Student:** Snehal Chavan
+**GitHub Username:** Snehal322
+**Issue:**  https://github.com/AcademySoftwareFoundation/rawtoaces/issues/87
+**Pull Request:** https://github.com/AcademySoftwareFoundation/rawtoaces/issues/87#issuecomment-6308963925
 
 One repository, built across units 5 to 8, telling the whole story of your real
 contribution. Fill it as you work, not at the end — the sections below ask for evidence that
@@ -55,10 +54,10 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: [one line on the tool work]**
+**Unit 5: Building and calibrating issue-scout for automated candidate filtering**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+I built the `issue-scout` tool and grading rubric to automate candidate repository scanning, scope verification, and policy checking across open GitHub issues. During initial scout scans, candidates frequently failed or were rejected due to repo-wide LLM bans (Cataclysm-DDA), empty descriptions (`AIRegistry#13`), upstream blockages (`CTSM#2497`), or existing contributor claims (`MaterialX#2813`). Because of these edge cases, I calibrated the scout to check live GitHub activity and specific repository AI policies (`docs/AI_Policy.md`), which successfully led to identifying and accepting `rawtoaces#87`.
+
 
 **Unit 6: [one line on the tool work]**
 
