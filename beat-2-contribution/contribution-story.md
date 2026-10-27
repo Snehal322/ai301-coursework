@@ -61,9 +61,7 @@ I built the `issue-scout` tool and grading rubric to automate candidate reposito
 
 **Unit 6: [one line on the tool work]**
 
-[2-4 sentences: the voice-guard, the repo-memory file. What broke or
-fell short, and what changed because of it. "Nothing broke" counts when
-it is true - say how you know.]
+I consolidated my voice guide into a single canonical file (`~/.claude/voice-guard/voice-guide.md`), added upstream rules for claims, questions, and pings, and merged the `PreToolUse` hook into `~/.claude/settings.json`. During initial wiring verification, interactive test commands such as `gh issue comment --help` were intercepted before reaching GitHub because no body file was provided. Nothing broke in production; I confirmed the guard was active when it blocked body-less calls with `"no body the guard can read"`.
 
 **Unit 7: [one line on the tool work]**
 
@@ -89,14 +87,18 @@ wild search and what you changed or would change, or what convinced
 you it held up. **Record the link to your claim comment in this section too.**
 Not claimed yet? Write `claim pending` and today's date where the link goes,
 and add the link the moment your claim lands.]
+I selected issue #87 in `AcademySoftwareFoundation/rawtoaces` after scanning multiple candidate open-source repositories using my `issue-scout` tool. The issue addresses specific color transformation and ACES build pipeline behaviors that match my profile well. The scout returned a PASS verdict, confirming that the repo allows AI-assisted tooling (no LLM bans), has clear reproduction potential, and lacks competing contributor claims.
+
+During the wild search, `issue-scout` initially flagged candidates with ambiguous AI policies or inactive maintainer activity. To prevent false positives, I calibrated the scout to cross-reference `AI_Policy.md` files and recent commit history, which reliably highlighted `rawtoaces#87` as a valid candidate.
+
+Claim Comment Link: https://github.com/AcademySoftwareFoundation/rawtoaces/issues/87#issuecomment-6431165398
 
 **Toolkit**
 
-- Tool: issue-scout (your scout: your search strategy, your rubric),
-  and how you used it
-- What it produced: [the scan and its verdict on this issue, described]
-- Difficulties: [where it fell short, or "none met" if none did]
-- What changed: [what you patched or would update, or "nothing"]
+- Tool: issue-scout (search strategy and rubric) & voice-guard (pre-comment validation)
+- What it produced: Scanned candidate issues, produced PASS verdict for rawtoaces#87, and validated claim draft formatting.
+- Difficulties: Initial candidate false positives on unstated AI policies; resolved by tuning rubric checks.
+- What changed: Upgraded scout to verify live GitHub issue activity and repo AI guidelines; symlinked canonical voice guide.
 
 ---
 
